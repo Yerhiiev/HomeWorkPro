@@ -1,0 +1,25 @@
+from flask import flask
+
+from flask import request
+
+app = Flask(__name__)
+
+@app.route("/register", methods=['GET', 'POST'])
+def register_user():
+    return("Registration form")
+
+@app.route("/Login", methods=['GET', 'POST'])
+def login():
+    return "<p>login</p>"
+
+@app.route("/user_page", methods=['GET'])
+def user_acces():
+    return("Functions")
+
+@app.route("/currency", methods=['GET', 'POST'])
+def currency_converter():
+    return("currency_converter")
+
+@app.route("/logout", methods=['GET'])
+def logout():
+    return "<p>logout</p>"
