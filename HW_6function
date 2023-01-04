@@ -30,7 +30,7 @@ def generate_data():
         {'bank': 'A1', 'currency': 'GPB', 'buy_rate': 1.15, 'sale_rate': 1.2},
     ]
     date_exchange = datetime.datetime.now().strftime('%Y-%m-%d')
-    with DBManager as db:
+    with DBManager() as db:
         for item in data:
             bank = item['bank']
             currency = item['currency']
